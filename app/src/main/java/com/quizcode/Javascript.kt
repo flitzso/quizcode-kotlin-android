@@ -13,33 +13,33 @@ class Javascript : AppCompatActivity() {
     private lateinit var binding: ActivityJavascriptBinding
 
     private val questions = arrayOf(
-        "Question 1",
-        "Question 2",
-        "Question 3",
-        "Question 4",
-        "Question 5",
-        "Question 6",
-        "Question 7",
-        "Question 8",
-        "Question 9",
-        "Question 10"
+        "Quem criou o Javascript?",
+        "Qual palavra-chave é usada para declarar uma variável em JavaScript?",
+        "Qual método é usado para adicionar um elemento a um array em JavaScript?",
+        "Qual dos seguintes operadores é usado para comparar a igualdade de valor e tipo em JavaScript?",
+        "Qual é a estrutura de repetição em JavaScript que executa um bloco de código enquanto uma condição for verdadeira?",
+        "Qual dos seguintes símbolos é usado para denotar um comentário de uma única linha em JavaScript?",
+        "Qual tipo de dado é usado para representar valores verdadeiros ou falsos em JavaScript?",
+        "Qual método é usado para remover o último elemento de um array em JavaScript?",
+        "Qual é a palavra-chave usada para declarar uma função em JavaScript?",
+        "Qual é o operador lógico usado para verificar se ambas as condições são verdadeiras em JavaScript?"
 
     )
 
     private val options = arrayOf(
-        arrayOf("Question 1", "Question 1", "Question 1"),
-        arrayOf("Question 2", "Question 2", "Question 2"),
-        arrayOf("Encapsulamento", "Polimorfismo", "Herança"),
-        arrayOf("Question4", "Question4", "question4"),
-        arrayOf("Question5", "Question5", "question5"),
-        arrayOf("Question6", "Question6", "Question6"),
-        arrayOf("Question7", "Question7", "Question7"),
-        arrayOf("Question8", "Question8", "Question8"),
-        arrayOf("Question9", "Question9", "Question9"),
-        arrayOf("Question10", "Question10", "Question10")
+        arrayOf("Rasmus Lerdorf", "Brendan Eich", "Guido van Rossum"),
+        arrayOf("Func", "Var", "If"),
+        arrayOf("Push", "Remove", "Replace"),
+        arrayOf("==", "!=", "==="),
+        arrayOf("For", "If", "While"),
+        arrayOf("//", "**", "/* */"),
+        arrayOf("Boolean", "String", "Null"),
+        arrayOf("Pop", "Shift", "Unshift"),
+        arrayOf("Define", "Func", "Function"),
+        arrayOf("&&", "||", "!")
     )
 
-    private val correctAnswers = arrayOf(0, 2, 2, 1, 1, 2, 0, 1, 0, 2)
+    private val correctAnswers = arrayOf(1, 1, 0, 2, 2, 0, 0, 0, 2, 0)
 
     private var currentQuestionIndex = 0
     private var score = 0
