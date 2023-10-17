@@ -12,33 +12,33 @@ class Css : AppCompatActivity() {
     private lateinit var binding: ActivityCssBinding
 
     private val questions = arrayOf(
-        "Question 1",
-        "Question 2",
-        "Question 3",
-        "Question 4",
-        "Question 5",
-        "Question 6",
-        "Question 7",
-        "Question 8",
-        "Question 9",
-        "Question 10"
+        "Qual propriedade CSS é usada para definir a cor do texto?",
+        "Qual propriedade CSS é usada para definir a cor de fundo de um elemento?",
+        "Qual seletor CSS é usado para selecionar todos os elementos de uma página?",
+        "Qual propriedade CSS é usada para definir a margem à direita de um elemento?",
+        "Qual valor de exibição CSS faz com que um elemento seja exibido como um bloco?",
+        "Qual propriedade CSS é usada para definir a largura de uma borda?",
+        "Qual propriedade CSS é usada para definir a fonte em um elemento de texto?",
+        "Qual propriedade CSS é usada para definir a espessura da fonte?",
+        "Qual propriedade CSS é usada para alinhar o texto horizontalmente dentro de um elemento?",
+        "Qual propriedade CSS é usada para definir a altura de uma área de texto?"
 
     )
 
     private val options = arrayOf(
-        arrayOf("Question 1", "Question 1", "Question 1"),
-        arrayOf("Question 2", "Question 2", "Question 2"),
-        arrayOf("Encapsulamento", "Polimorfismo", "Herança"),
-        arrayOf("Question4", "Question4", "question4"),
-        arrayOf("Question5", "Question5", "question5"),
-        arrayOf("Question6", "Question6", "Question6"),
-        arrayOf("Question7", "Question7", "Question7"),
-        arrayOf("Question8", "Question8", "Question8"),
-        arrayOf("Question9", "Question9", "Question9"),
-        arrayOf("Question10", "Question10", "Question10")
+        arrayOf("background-color", "text-color", "color"),
+        arrayOf("text-color", "background-color", "foreground-color"),
+        arrayOf("*", "all", " body"),
+        arrayOf("margin-right", "right-margin", "margin-end"),
+        arrayOf("inline", "flex", "block"),
+        arrayOf("border-width", "border-size", "border-thickness"),
+        arrayOf("font-family", "text-font", "font-style"),
+        arrayOf("font-weight", "font-thickness", "text-weight"),
+        arrayOf("text-align", "horizontal-align", "align-text"),
+        arrayOf("height", "text-height", "area-height")
     )
 
-    private val correctAnswers = arrayOf(0, 2, 2, 1, 1, 2, 0, 1, 0, 2)
+    private val correctAnswers = arrayOf(2, 1, 0, 0, 2, 0, 0, 0, 0, 0)
 
     private var currentQuestionIndex = 0
     private var score = 0

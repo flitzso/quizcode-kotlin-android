@@ -12,33 +12,33 @@ class Html : AppCompatActivity() {
     private lateinit var binding: ActivityHtmlBinding
 
     private val questions = arrayOf(
-        "Question 1",
-        "Question 2",
-        "Question 3",
-        "Question 4",
-        "Question 5",
-        "Question 6",
-        "Question 7",
-        "Question 8",
-        "Question 9",
-        "Question 10"
+        "Qual é a tag HTML usada para criar uma lista não ordenada?",
+        "Qual é a tag HTML usada para criar um link?",
+        "Qual elemento HTML é usado para criar um cabeçalho de primeiro nível?",
+        "Qual tag HTML é usada para criar um parágrafo?",
+        "Qual é a tag HTML usada para inserir uma quebra de linha?",
+        "Qual é a tag HTML usada para criar uma tabela?",
+        "Qual atributo HTML é usado para definir o texto alternativo de uma imagem?",
+        "Qual é a tag HTML usada para criar uma lista ordenada?",
+        "Qual elemento HTML é usado para criar uma linha horizontal?",
+        "Qual tag HTML é usada para criar um link de email?"
 
     )
 
     private val options = arrayOf(
-        arrayOf("Question 1", "Question 1", "Question 1"),
-        arrayOf("Question 2", "Question 2", "Question 2"),
-        arrayOf("Encapsulamento", "Polimorfismo", "Herança"),
-        arrayOf("Question4", "Question4", "question4"),
-        arrayOf("Question5", "Question5", "question5"),
-        arrayOf("Question6", "Question6", "Question6"),
-        arrayOf("Question7", "Question7", "Question7"),
-        arrayOf("Question8", "Question8", "Question8"),
-        arrayOf("Question9", "Question9", "Question9"),
-        arrayOf("Question10", "Question10", "Question10")
+        arrayOf("<ol>", "<ul>", "<li>"),
+        arrayOf("<a>", "<link>", "<href>"),
+        arrayOf("<header>", "<h1>", "<head>"),
+        arrayOf("<p>", "<para>", "<pr>"),
+        arrayOf("<break>", "<br>", "<newline>"),
+        arrayOf("<table>", "<tab>", "<t>"),
+        arrayOf("<text>", "<description>", "<alt>"),
+        arrayOf("<ol>", "<ul>", "<li>"),
+        arrayOf("<line>", "<hr>", "<horizontal>"),
+        arrayOf("<email>", "<link>", "<a>")
     )
 
-    private val correctAnswers = arrayOf(0, 2, 2, 1, 1, 2, 0, 1, 0, 2)
+    private val correctAnswers = arrayOf(1, 0, 1, 0, 1, 0, 2, 0, 1, 2)
 
     private var currentQuestionIndex = 0
     private var score = 0
