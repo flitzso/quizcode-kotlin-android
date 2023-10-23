@@ -1,11 +1,11 @@
 package com.quizcode
 
-
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.google.android.material.color.utilities.Score
 import com.quizcode.databinding.ActivityJavascriptBinding
 
 class Javascript : AppCompatActivity() {
@@ -43,6 +43,7 @@ class Javascript : AppCompatActivity() {
 
     private var currentQuestionIndex = 0
     private var score = 0
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -91,7 +92,7 @@ class Javascript : AppCompatActivity() {
     }
 
     private fun showResults(){
-        Toast.makeText(this, "Your score: $score out of ${questions.size}", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Your score: ${score} out of ${questions.size}", Toast.LENGTH_LONG).show()
         binding.restartButton.isEnabled = true
     }
 
@@ -106,17 +107,22 @@ class Javascript : AppCompatActivity() {
     private fun checkAnswer(selectedAnswerIndex: Int) {
         val correctAnswerIndex = correctAnswers[currentQuestionIndex]
 
-        if (selectedAnswerIndex == correctAnswerIndex) {
-            score++
-            correctButtonColors(selectedAnswerIndex)
+        if (currentQuestionIndex <= 10) {
+            if (selectedAnswerIndex == correctAnswerIndex) {
+                score++
+                correctButtonColors(selectedAnswerIndex)
+            } else {
+                wrongButtonColors(selectedAnswerIndex)
+                correctButtonColors(correctAnswerIndex)
+            }
+
         } else {
-            wrongButtonColors(selectedAnswerIndex)
-            correctButtonColors(correctAnswerIndex)
+            // Questoes apos a questao 10
         }
 
         if (currentQuestionIndex < questions.size - 1) {
             currentQuestionIndex++
-            displayQuestion()
+            binding.questionText.postDelayed({displayQuestion()}, 1000)
         } else {
             binding.restartButton.visibility = View.VISIBLE
             showResults()

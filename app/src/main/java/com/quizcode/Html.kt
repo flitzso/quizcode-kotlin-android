@@ -112,10 +112,10 @@ class Html : AppCompatActivity() {
             wrongButtonColors(selectedAnswerIndex)
             correctButtonColors(correctAnswerIndex)
         }
-
+        //O bug e essa logica aqui
         if (currentQuestionIndex < questions.size - 1) {
             currentQuestionIndex++
-            displayQuestion()
+            binding.questionText.postDelayed({displayQuestion()}, 1000)
         } else {
             binding.restartButton.visibility = View.VISIBLE
             showResults()
